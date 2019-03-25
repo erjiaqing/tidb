@@ -1,0 +1,14 @@
+use test;
+drop table if exists t;
+drop table if exists v;
+create table t ( c int );
+insert into t values (42);
+create view v as select * from t;
+drop database if exists d;
+create database d;
+use d;
+select * from test.t;
+drop database d;
+use test;
+drop table if exists t;
+drop table if exists v;
